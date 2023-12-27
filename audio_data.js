@@ -10,7 +10,7 @@ function handleFileSelect(event) {
   const fileSize = audioFile.size;
 
   // ファイルのデータを取得する
-  const fileData = await audioFile.arrayBuffer();
+  const fileData = audioFile.arrayBuffer();
 
   // ファイルのデータを Web Audio API で読み込む
   const audioBuffer = audioContext.createBuffer(2, 44100, 'float32');
